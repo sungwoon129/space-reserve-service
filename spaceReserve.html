@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="refresh" content="300">
+        <link href="css/loader.css" rel="stylesheet">
+        <link href="css/status.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="loader-background-box transparent" id="process-box">
+            <div class="loader-wrapper d-flex justify-content-center align-items-center">
+                <div class="loader">
+                    <div class="ball-spin-fade-loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule" id="scheduler">
+            <div class="schedule-header">
+                <div class="statusGroup">
+                    <div>
+                        <span class="square done"></span><span class="inline">사용 완료</span>
+                    </div>
+                    <div>
+                        <span class="square occupied"></span><span class="inline">사용 중</span>
+                    </div>
+                    <div>
+                        <span class="square non-clickable-area"></span><span class="inline">사용 불가</span>
+                    </div>
+                    <div>
+                        <span class="square book"></span><span class="inline">예약</span>
+                    </div>
+                    <div>
+                        <span class="square complex-book"></span><span class="inline">2건이상</span>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule_body" id="schedule_body"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="lib/moment/moment.js"></script>
+        <script type="text/javascript" src="lib/lodash-4.17.21/dist/lodash.js"></script>
+        <script type="text/javascript" src="js/spaceReserve.js"></script>
+        
+        <script>
+       var useData = {
+           list : []
+       }
+
+       var goodsData = {
+           list : []
+       }
+
+       var date = "2022-05-05";
+
+        function load() {
+            bookStatus.load({
+                            options: ["events"],
+                            data: {
+                                bookData: useData.list,
+                                spaceData: goodsData.list, 
+                                search: {
+                                    //search.date의 날짜 포맷은 항상 YYYYMMDD이어야 함
+                                    date: date.split("-").join(""),
+                                    center: $("button[name='center_name']").val()
+                                },
+                            },
+                            scrollPosition: {
+                                standard: "timeline",
+                                time: moment()
+                            },
+                        });
+            document.getElementById("process-box").classList.remove("show-loader");                
+        }
+        load();
+        </script>
+    </body>
+</html>

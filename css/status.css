@@ -1,0 +1,381 @@
+body {
+    overflow-y: hidden;
+}
+.mobile-view {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    touch-action: none;
+}
+
+.app-main {
+    flex-direction: column;
+}
+.square {
+    border: 1px solid gray;
+    background: skyblue;
+    width: .8rem;
+    height: .8rem;
+    display: inline-block;
+    border: none;
+}
+.data {
+    color : #FFF;   
+}
+.td-timeline {
+    border-top:1px solid rgba(233, 236, 239, .5) !important;
+    border-bottom:1px solid rgba(233, 236, 239, .5) !important;
+}
+.done {
+    background: #ee1c25;
+}
+
+.book {
+    background: #5464af ;
+}
+
+.cancel-text {
+    color:#2C3E50;
+}   
+.book-text {
+    color: #5464af ;
+}
+.complete-text {
+    color:#ee1c25;
+}
+.occupied {
+    background: #007bff;
+}
+.cancel {
+    background: #6c757d;
+}
+.complex-book {
+    background: #fd7e14;
+}
+.inline {
+    display: inline-block
+}
+.non-clickable-area {
+    background:#CCC;
+}
+
+.statusGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.statusGroup div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.statusGroup div span {
+    margin-right: 5px;
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_group {
+    display: flex;
+}
+
+.btn_group div {
+    margin-left: 0.5rem;
+}
+.schedule_body {
+    width:100%;
+    height:40vh;
+    overflow-x:auto;
+    white-space:nowrap;
+    position:relative;
+}
+
+.scrollable {
+     position: relative;
+    
+}
+
+.scrollable th:first-child, .scrollable td:first-child {
+    position: sticky;
+    background-color: white;
+    left: 0;
+    z-index:10;
+}
+.scrollable tr:first-child > td {
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index:10;
+}  
+
+.scrollable td {
+
+    text-align:center;
+    height:2rem;
+    padding:0;
+    position:relative;
+    min-width:65px;
+}
+.td-timeline {
+    vertical-align: top !important;
+    position:relative;
+}
+.scrollable td div {
+    cursor:default;
+
+}
+.line-through {
+    position: relative;
+    top: -11px;
+}
+.td-head {
+    vertical-align: middle;
+}
+.scrollable_tooltip {
+    position: fixed;
+    z-index: 105;
+    background: #495057;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    
+}
+
+.tooltip_box {
+    float:right;
+}
+
+.tooltip_invisible {
+    display:none;
+
+}
+
+.auto_position {
+    top: auto;
+    left: auto;
+}
+.popover-contents-box:not(:last-child) {
+    border-bottom : 1px solid #f2f2f2;    
+}
+.popover-container {
+    padding:inherit;
+}
+.popover-contents-box {
+    padding:inherit;
+}
+.popover {
+    white-space:pre;
+    max-width:320px;
+}
+.popover-title {
+    font-weight: 500;
+}
+.table-hover {
+    background: #E0F3FF;
+}
+
+.table-activate {
+    background:#ffc107;
+}
+.calendar-none {
+    display:none;
+}
+.popover-position {
+    top:1.3rem;
+}
+.popover-none {
+    display:none;
+}
+.popover-btn-container {
+    display:flex;
+    justify-content:space-around;
+}
+.popover-close {
+    font-size:1.6rem;
+    float:right;
+    color:#000;
+    margin: -0.3rem;
+}
+.no-border {
+    border:0;
+}
+.arrow-right{
+    position:absolute;
+    z-index:11;
+    width: 100%;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid skyblue;/* ȭ��ǥ */
+}
+.time-line {
+    height:2px;
+    background:skyblue;
+    font-size:0;
+    line-height:0;
+    padding:0;
+    margin:0
+}
+.flex-wrap {
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    
+}
+.absolute {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    overflow:hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    font-size: .9em;
+}
+.fc-event {
+    border: 1px solid transparent;
+    color:#343a40;
+    text-align:center;
+    font-size:1em;
+    border-radius:4px;
+    padding: 0.4rem 0.2rem;
+    color:#FFF;
+    
+}
+.fc-event > div {
+    color:#FFF;
+    font-weight:600;
+}
+.fc-daygrid-day-events {
+    display: flex;
+    justify-content: center;
+}
+.fc-daygrid-day-bottom {
+    display: contents;
+}
+.fc-daygrid-event {
+    padding:.3rem .5rem; 
+} 
+.calendar-container {
+    height:auto;
+}
+.fc-body .fc-row { 
+
+}
+@media screen and (max-width: 1600px) {
+    .event-wrapper-custom {
+        display:flex;
+        justify-content:space-evenly;
+     
+    }
+    .fc-daygrid-day-events {
+        display: block;
+    }
+    .fc-daygrid-event {
+        padding:0; 
+    }
+    .event-wrapper-custom {
+        display:flex;
+    }     
+
+}
+@media screen and (max-width: 768px) {
+    div.fc-content-skeleton > table > tbody {
+        display: block;
+        
+    }
+    .fc-event-container {
+        width:100%;
+    }
+    .fc-event {
+        padding:0.2rem;
+        border: 1px solid transparent;
+        color:#343a40;
+        text-align:center;
+        border-radius:4px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;        
+    }
+    .statusGroup {
+        display: none;
+    }
+    .schedule-header {
+        display:block;
+    }
+/*     .schedule_body {
+        height: 350px;
+    } */
+    .btn_group {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn_group button {
+        width:100%;
+        margin-bottom: 1rem;
+    }
+    .fc-right {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 991.98px) {
+    .popover .arrow  {
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 0.5rem;
+        margin: 0 0.3rem;    
+    }
+    .popover {
+        position: absolute;
+        z-index: 999;
+        left: 5.5% !important;
+        transform: none;
+        min-width: 10px !important;
+        top: unset !important;
+        bottom: 10px;
+        width: 100% !important;
+        transform: unset !important;
+    }
+    .dropdown-menu {
+        position: fixed !important;
+        z-index: 999;
+        left: 0 !important;
+        transform: none;
+        min-width: 10px !important;
+        top: unset !important;
+        bottom: 10px;
+        width: 100% !important;
+        transform: unset !important;
+        margin : 0;
+        bottom: 0 !important;
+    }
+    .btn_group div {
+        margin-left:0;
+    }
+    
+}
+@media (max-width:768px) {
+
+    .app-sidebar .scrollbar-sidebar {
+    z-index: 100;
+}
+    .schedule_body {
+        height:30%;
+    }
+    .btn_group button {
+        width:100%;
+        margin-bottom: .5rem;
+    }
+    .popover {
+    max-width:90vw;
+    }
+
+}
