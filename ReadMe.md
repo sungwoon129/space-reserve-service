@@ -10,17 +10,17 @@ API 서버에서 데이터를 전달받아 화면에 렌더링한다는 시나�
 
 #### 공간 데이터
 
-```JSON
+```javascript
 [
-    {
-        spaceUseStatusCd: "01",   // 공간이용 상태(예약,사용중,사용불가등)
-        startDt: "202307311310",  // 시작시간
-        endDt: "202307311340",    // 종료시간
-        goodsUid: "1",            // 공간 id
-        spaceUseUid: "1",         // 공간사용 id
-        userid: "user A",         // 사용자 id
-    }
-]
+  {
+    spaceUseStatusCd: "01", // 공간이용 상태(예약,사용중,사용불가등)
+    startDt: "202307311310", // 시작시간
+    endDt: "202307311340", // 종료시간
+    goodsUid: "1", // 공간 id
+    spaceUseUid: "1", // 공간사용 id
+    userid: "user A", // 사용자 id
+  },
+];
 ```
 
 #### 예약 데이터
