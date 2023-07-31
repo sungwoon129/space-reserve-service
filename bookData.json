@@ -1,0 +1,43 @@
+bookData = {
+  "list" : [
+  {
+    spaceUseStatusCd: "01",
+    startDt: "202307311310",
+    endDt: "202307311340",
+    goodsUid: "1",
+    spaceUseUid: "1",
+    userid: "user A",
+  },
+  {
+    spaceUseStatusCd: "01",
+    startDt: "20230731121000",
+    endDt: "20230731135500",
+    goodsUid: "2",
+    spaceUseUid: "2",
+    userid: "user A",
+  },
+  {
+    spaceUseStatusCd: "01",
+    startDt: "20230731141100",
+    endDt: "20230731154020",
+    goodsUid: "3",
+    spaceUseUid: "3",
+    userid: "user B",
+  },
+  {
+    spaceUseStatusCd: "01",
+    startDt: "20230731132015",
+    endDt: "20230731133533",
+    goodsUid: "4",
+    spaceUseUid: "4",
+    userid: "user C",
+  },
+  {
+    spaceUseStatusCd: "01",
+    startDt: "20230731151020",
+    endDt: "20230731155046",
+    goodsUid: "5",
+    spaceUseUid: "5",
+    userid: "user D",
+  },
+]};

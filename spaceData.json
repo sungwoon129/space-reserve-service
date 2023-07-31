@@ -1,0 +1,39 @@
+spaceData = {
+  "list" : [
+  {
+    goodsUid: "1",
+    goodsName: "공간1",
+    spaceCode: "01",
+  },
+  {
+    goodsUid: "2",
+    goodsName: "공간2",
+    spaceCode: "01",
+  },
+  {
+    goodsUid: "3",
+    goodsName: "공간3",
+    spaceCode: "01",
+  },
+  {
+    goodsUid: "4",
+    goodsName: "공간4",
+    spaceCode: "01",
+  },
+  {
+    goodsUid: "5",
+    goodsName: "공간6",
+    spaceCode: "01",
+  },
+  {
+    goodsUid: "6",
+    goodsName: "공간6",
+    spaceCode: "01",
+  },
+  {
+    goodsUid: "7",
+    goodsName: "공간7",
+    spaceCode: "01",
+  },
+]}
+;

@@ -772,7 +772,6 @@ var bookStatus = {
               // 예약이 가능한 공간인지(게러지인지), 불가능한 공간인지 spaceCode로 구분하여 클릭이벤트 비활성화하기 위한 플래그 set
               bookStatus.data.spaceList.forEach(function (space) {
                 if (space.goodsUid == obj.goodsUid) {
-                  //api 완성이후 베이와 게러지를 구분할 수 있으면 수정.
                   cellCode = space.spaceCode;
                 }
               });

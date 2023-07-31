@@ -4,6 +4,8 @@
         <meta http-equiv="refresh" content="300">
         <link href="css/loader.css" rel="stylesheet">
         <link href="css/status.css" rel="stylesheet">
+        <script type="text/javascript" src="./bookData.json"></script>
+        <script type="text/javascript" src="./spaceData.json"></script>
     </head>
     <body>
         <div class="loader-background-box transparent" id="process-box">
@@ -52,22 +54,17 @@
         <script type="text/javascript" src="js/spaceReserve.js"></script>
         
         <script>
-       var useData = {
-           list : []
-       }
-
-       var goodsData = {
-           list : []
-       }
-
-       var date = "2022-05-05";
+            var bookData = JSON.parse(JSON.stringify(bookData));
+            var spaceData = JSON.parse(JSON.stringify(spaceData));
+       
+       var date = "2023-07-31";
 
         function load() {
             bookStatus.load({
                             options: ["events"],
                             data: {
-                                bookData: useData.list,
-                                spaceData: goodsData.list, 
+                                bookData: bookData.list,
+                                spaceData: spaceData.list, 
                                 search: {
                                     //search.date의 날짜 포맷은 항상 YYYYMMDD이어야 함
                                     date: date.split("-").join(""),
@@ -84,4 +81,5 @@
         load();
         </script>
     </body>
+
 </html>
